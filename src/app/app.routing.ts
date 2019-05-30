@@ -1,0 +1,20 @@
+import { Routes } from '@angular/router';
+import { PastWinnersComponent } from './modules/components/past-winners/past-winners.component';
+import { JudgesComponent } from './modules/components/judges/judges.component';
+import { AboutAwardsComponent } from './modules/components/about-awards/about-awards.component';
+import { ModernSlaveryComponent } from './modules/components/modern-slavery/modern-slavery.component';
+import { HomeComponent } from './modules/components/home/home.component';
+import { TermsConditionComponent } from './modules/components/terms-condition/terms-condition.component';
+import { CategoriesComponent } from './modules/components/categories/categories.component';
+
+const router: Routes = [
+   {path: '', component: HomeComponent},
+  {path: 'pastwinner', component: PastWinnersComponent},
+  {path: 'judges', component: JudgesComponent},
+  {path: 'about-awards', component: AboutAwardsComponent},
+  {path: 'modern-slavery', component: ModernSlaveryComponent},
+  {path: 'terms-condition', component: TermsConditionComponent},
+  {path: 'categories', component: CategoriesComponent}
+]
+
+export const RouterConfig = router

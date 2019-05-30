@@ -1,21 +1,86 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<nav class="nav-wrapper py-50" style="display:block" *ngIf="show" >
+  <div class="container h-100">
+    <div class="nav-x">
+      <div class="d-none d-md-inline-block">MENU</div> 
+      <button  (click)="show=!show">
+          <span></span>
+          <span></span>
+      </button>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 brdr-lft d-none d-lg-block">
+          <div class="content">
+            <h3 class="title">APPLICATIONS <br/>OPEN</h3>
+            <p>10th June - 30th September</p>
+            <div class="btn-row pt-3">
+                <a class="btn btn-primary" href="">APPLY NOW</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-12 col-md-6 brdr-lft">
+          <div class="nav-links">
+              <ul>
+                <li><a (click)="route('categories')">CATEGORIES</a></li>
+                <li><a (click)="route('about-awards')">ABOUT THE AWARDS</a></li>
+                <li><a (click)="route('judges')">JUDGES</a></li>
+                <li><a (click)="route('pastwinner')">PREVIOUS WINNERS</a></li>
+                <li><a (click)="route('terms-condition')">T&Cs</a></li>
+                <li><a href="http://www.trust.org/about-us/" target="_blank">ABOUT US</a></li>
+              </ul>
+          </div>
+          <div class="copyright">Copyright © 2019 Thomson Reuters Foundation.</div>
+      </div>
+    </div>
+  </div>
+</nav>  
+
+
+<header class="site-header py-50">
+  <div class="container">
+    <div class="row align-items-center">
+        <div class="col">
+          <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="nav-icon d-flex justify-content-end ">
+            <div class="d-none d-md-inline-block">MENU</div> 
+             <button class="about-awards" (click)="showMe()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+    </div>
+  </div>
+</header>
+
+
+<router-outlet (activate)='onActivate($event)'></router-outlet>
+
+<footer class="site-footer py-50">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-9 col-lg-7">
+              <div class="footer-content">
+                <p class="my-sm-1">Copyright © 2019 Thomson Reuters Foundation. Thomson Reuters Foundation is a charity registered in England and Wales (registration number: 1082139)</p>
+                <ul class="footer-links">
+                  <li><a [routerLink] = "['terms-condition']">Terms and Conditions</a></li>
+                  <li><a href="http://www.trust.org/privacy-and-cookies/" target="_blank">Privacy and Cookies</a></li>
+                  <li><a href="http://www.trust.org/acceptable-use-policy/" target="_blank">Acceptable Use Policy</a></li>
+                  <li><a href="http://www.trust.org/about-us/index.html#contact" target="_blank">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-5">
+                <div class="footer-logo">
+                    <img src="assets/images/footer-logo.png" alt="Logo">
+                </div>
+            </div>
+        </div>
+  </div>
+</footer>
