@@ -1,8 +1,11 @@
 <section *ngIf="show" class="title-banner py-50">
   <div class="container">
     <div class="content">
-        <h1>JUDGES <span>MEET THE JUDGING PANEL</span></h1>
-        <p>Bringing together some of the world’s highest-profile leaders in the fight against slavery the judging pnale is made up of... more text..</p>
+        <h1> <div [innerHTML]="pageTitle"></div>
+            <span [innerHTML]="titleSubText"></span>
+        </h1>
+  
+        <span [innerHTML]="introText"></span>
     </div>
  </div>
 </section>

@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   aboutTheAwards: String;
   aboutThePrize: String;
   aboutThePrizeUrl: String;
-  whatIsModernSlaveryAndHumanTrafficking: String
+  whatIsModernSlaveryAndHumanTrafficking: String;
 
   constructor(
     private http: HttpService
@@ -28,6 +28,8 @@ export class HomeComponent implements OnInit {
       this.aboutTheAwards = data && data['aboutTheAwards']
     })
   }
+
+  
 
   ngOnDetroy() {
     this.httpSubscription && this.httpSubscription.unsubscribe();

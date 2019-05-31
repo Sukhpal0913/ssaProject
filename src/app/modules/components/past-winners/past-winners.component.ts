@@ -12,6 +12,7 @@ export class PastWinnersComponent implements OnInit {
   httpSubscription: Subscription
   introText: String
   pageTitle: String
+  titleSubText: String
 
   constructor(private http: HttpService) { }
 
@@ -19,7 +20,8 @@ export class PastWinnersComponent implements OnInit {
     this.httpSubscription = this.http.get('https://ssaangular.trust.org/api/content/id/80c2a870-1baf-40ad-b653-49c1d307c0d7').subscribe(result => {
       const data = result && result['contentlets'] && result['contentlets'][0];
       this.introText = data && data['introText'];
-      this.pageTitle = data && data['pageTitle']
+      this.pageTitle = data && data['pageTitle'];
+      this.titleSubText = data && data['titleSubText'];
 
     })
   }

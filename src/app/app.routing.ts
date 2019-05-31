@@ -9,11 +9,11 @@ import { CategoriesComponent } from './modules/components/categories/categories.
 
 const router: Routes = [
    {path: '', component: HomeComponent},
-  {path: 'pastwinner', component: PastWinnersComponent},
+  {path: 'past-winners', component: PastWinnersComponent},
   {path: 'judges', component: JudgesComponent},
   {path: 'about-awards', component: AboutAwardsComponent},
-  {path: 'modern-slavery', component: ModernSlaveryComponent},
-  {path: 'terms-condition', component: TermsConditionComponent},
+  {path: 'what-is-modern-slavery-and-human-trafficking', component: ModernSlaveryComponent},
+  {path: 'terms-and-conditions', component: TermsConditionComponent},
   {path: 'categories', component: CategoriesComponent}
 ]
 

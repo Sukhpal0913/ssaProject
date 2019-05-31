@@ -12,6 +12,7 @@ export class AboutAwardsComponent implements OnInit {
   httpSubscription: Subscription
   introText: String;
   mainText: String;
+  pageTitle: String;
   theMainObjectivesOfTheAward: String;
 
   constructor(private http: HttpService) { }
@@ -21,6 +22,7 @@ export class AboutAwardsComponent implements OnInit {
       const data = result && result['contentlets'] && result['contentlets'][0];
       this.introText = data && data['introText'];
       this.mainText = data && data['mainText'];
+      this.pageTitle = data && data['pageTitle'];
       this.theMainObjectivesOfTheAward = data && data['theMainObjectivesOfTheAward'];
     })
 

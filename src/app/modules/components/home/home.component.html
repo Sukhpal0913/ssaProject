@@ -15,9 +15,7 @@
       <div class="col-lg-7">
           <div class="content">
               <h2>ABOUT THE AWARDS</h2>
-              <p>The Stop Slavery Awards were launched by the Thomson Reuters Foundation in 2015 to recognise companies who can be considered "best in class," based on the policies and the processes they have in place to limit the risk of slavery in their supply chain, as well as on the role they are taking as key agents in the global fight against slavery. </p>
-              <p>The Stop Slavery Awards have gone from strength to strength and with the launch of new categories for 2020 now recognise SMEs, CSO’s &amp; NGOs, Grass Roots 
-                  Organisations and the public sector.  </p>
+              <span [innerHTML]="aboutTheAwards"></span>
               <div class="btn-row pt-3">
                   <a class="btn btn-primary" href="">READ MORE</a>
               </div>
@@ -76,7 +74,8 @@
         <div class="col-lg-7 pl-lg-5">
             <div class="content">
                 <h2 class="d-none d-lg-block">ABOUT THE PRIZE</h2>
-                {{aboutThePrize}}
+                <span [innerHTML]="aboutThePrize"></span>
+              
                 <div class="btn-row pt-3">
                     <a class="btn btn-primary" routerLink="aboutThePrizeUrl" target="_blank">FIND OUT MORE</a>
                 </div>
@@ -128,10 +127,9 @@
       <div class="col-lg-7">
           <div class="content">
               <h2>WHAT IS MODERN SLAVERY &amp; HUMAN TRAFFICKING?</h2>
-              <p>Slaves are people coerced into working through force or fraud at no pay beyond subsistence. All types of slavery – including sex trafficking, debt bondage, domestic servitude and forced labour - rely on violence or the threat of violence. The Hub aims to shed light and share knowledge on this issue in order to prompt action.</p>
-              <p>According to the International Labour Organization and Walk Free Foundation, over 40 million people around the world are victims of modern slavery. Slavery is a hugely profitable business, one estimated to be worth $150 billion a year.</p>
+              <span [innerHTML]="whatIsModernSlaveryAndHumanTrafficking"></span>
               <div class="btn-row pt-3">
-                  <a class="btn btn-primary" [routerLink] = "['modern-slavery']">READ MORE</a>
+                  <a class="btn btn-primary" [routerLink] = "['what-is-modern-slavery-and-human-trafficking']">READ MORE</a>
               </div>
           </div>
       </div>
@@ -140,8 +138,7 @@
               <img src="assets/images/slavery-img.jpg" alt="About image">
           </div>
       </div>
-    </div>
-      
+    </div>   
   </div>
 </section>
 
