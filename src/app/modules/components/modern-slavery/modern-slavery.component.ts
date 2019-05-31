@@ -18,7 +18,7 @@ export class ModernSlaveryComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.httpSubscription = this.http.get('http://cms.trust.org/api/content/id/0f6d01a1-b4f9-4f49-926a-d33fd0696208').subscribe(result => {
+    this.httpSubscription = this.http.get('https://cms.trust.org/api/content/id/0f6d01a1-b4f9-4f49-926a-d33fd0696208').subscribe(result => {
       const data = result && result['contentlets'] && result['contentlets'][0];
       this.pageTitle = data && data['pageTitle'];
       this.introText = data && data['introText'];
