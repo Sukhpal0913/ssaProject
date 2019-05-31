@@ -15,7 +15,7 @@ export class TermsConditionComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.httpSubscription = this.http.get('https://cms.trust.org/api/content/id/1965279b-df64-4ebc-9a70-2ce069042db1').subscribe(result => {
+    this.httpSubscription = this.http.get('https://ssaangular.trust.org/api/content/id/1965279b-df64-4ebc-9a70-2ce069042db1').subscribe(result => {
       const data = result && result['contentlets'] && result['contentlets'][0];
       this.mainText = data && data['mainText'];
 

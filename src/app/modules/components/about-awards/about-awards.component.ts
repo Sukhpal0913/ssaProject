@@ -12,15 +12,17 @@ export class AboutAwardsComponent implements OnInit {
   httpSubscription: Subscription
   introText: String;
   mainText: String;
+  pageTitle: String;
   theMainObjectivesOfTheAward: String;
 
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.httpSubscription = this.http.get('https://cms.trust.org/api/content/id/3d4096e4-661a-438f-9d25-28c2e0db3e10').subscribe(result => {
+    this.httpSubscription = this.http.get('https://ssaangular.trust.org/api/content/id/3d4096e4-661a-438f-9d25-28c2e0db3e10').subscribe(result => {
       const data = result && result['contentlets'] && result['contentlets'][0];
       this.introText = data && data['introText'];
       this.mainText = data && data['mainText'];
+      this.pageTitle = data && data['pageTitle'];
       this.theMainObjectivesOfTheAward = data && data['theMainObjectivesOfTheAward'];
     })
 
