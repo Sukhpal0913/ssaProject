@@ -16,7 +16,7 @@ export class PastWinnersComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.httpSubscription = this.http.get('https://cms.trust.org/api/content/id/80c2a870-1baf-40ad-b653-49c1d307c0d7').subscribe(result => {
+    this.httpSubscription = this.http.get('https://ssaangular.trust.org/api/content/id/80c2a870-1baf-40ad-b653-49c1d307c0d7').subscribe(result => {
       const data = result && result['contentlets'] && result['contentlets'][0];
       this.introText = data && data['introText'];
       this.pageTitle = data && data['pageTitle']

@@ -30,7 +30,6 @@ constructor(private router:Router){
     this.show=false;
     this.router.navigate([routePath]);
   }
-
 }
 
 

@@ -18,7 +18,7 @@ export class CategoriesComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.httpSubscription = this.http.get('https://cms.trust.org/api/content/id/4d2a9cd1-9a23-4b6c-9b33-04fb833bf50a').subscribe(result => {
+    this.httpSubscription = this.http.get('https://ssaangular.trust.org/api/content/id/4d2a9cd1-9a23-4b6c-9b33-04fb833bf50a').subscribe(result => {
       const data = result && result['contentlets'];
       this.pageTitle = data && data['pageTitle'];
       this.introText = data && data['introText'];

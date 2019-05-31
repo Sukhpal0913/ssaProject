@@ -19,7 +19,7 @@ export class JudgesComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.httpSubscription = this.http.get('https://cms.trust.org/api/content/id/7e523f2d-0320-40e4-aed3-0eef83bb1408').subscribe(result => {
+    this.httpSubscription = this.http.get('https://ssaangular.trust.org/api/content/id/7e523f2d-0320-40e4-aed3-0eef83bb1408').subscribe(result => {
       const data = result && result['contentlets'] && result['contentlets'][0];
       this.pageTitle = data && data['pageTitle'];
       this.introText =  data && data['introText'];

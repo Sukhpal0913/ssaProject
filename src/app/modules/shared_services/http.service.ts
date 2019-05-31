@@ -11,6 +11,9 @@ export class HttpService {
 
    }
    get(api: string) : Observable<any>{
+     let header = new Headers()
+    //  header.append('Access-Control-Allow-Origin', '*')
+     header.delete('Access-Control-Allow-Origin')
     return this.http.get(api);
   }
 }
