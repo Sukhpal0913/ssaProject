@@ -1,128 +1,129 @@
 <section class="title-banner py-50">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-8">
-                  <div class="content">
-                          <h1>{{details && details['awardName']}}<span>{{details && details['titleSubText']}}</span></h1>
-                          <p class="mb-4">{{details && details['introText']}}</p>
-                                <div class="btn-row mb-4"><a class="btn btn-primary" [href]="details && details['applicationLink']" target='_blank'>APPLY NOW</a></div>
-                  </div>
-          </div>
-          <div class="col-lg-4 d-none d-lg-block">
-                  <div class="img side-fixed">
-                          <img [src]="getimageLink()" alt="About image">
-                  </div>
-          </div>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="content">
+                    <h1>{{details && details['awardName']}}<span>{{details && details['titleSubText']}}</span></h1>
+                    <p class="mb-4">{{details && details['introText']}}</p>
+                    <div class="btn-row mb-4"><a class="btn btn-primary" [href]="details && details['applicationLink']"
+                            target='_blank'>APPLY NOW</a></div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="img side-fixed">
+                    <img [src]="getimageLink()" alt="About image">
+                </div>
+            </div>
+        </div>
 
- </div>
+    </div>
 </section>
 
 <section class="bg-secondary keydates py-50 px-40">
     <div class="container">
-          <div class="row">
-              <div class="col-xl-2 col-lg-3">
-                  <h2>KEY DATES</h2>
-              </div>
-              <div class="col-xl-10 col-lg-9 border-left m-scroll">
+        <div class="row">
+            <div class="col-xl-2 col-lg-3">
+                <h2>KEY DATES</h2>
+            </div>
+            <div class="col-xl-10 col-lg-9 border-left m-scroll">
 
-                  <div class="content-datewise">   
-                  <div class="row">
-                          <div class="col-xl-4 col-md-5 col">
-                              <div class="left-text">   
-                                  <span>10th JUNE 2019</span>
-                              </div>
-                          </div>
-                         <div class="col">
-                             <div class="right-text checked">Applications open</div>
-                          </div>
-                     </div>
-                     <div class="row">
-                          <div class="col-xl-4 col-md-5 col">
-                              <div class="left-text">   
-                                  <span>20th JUNE 2019</span>
-                              </div>
-                          </div>
-                         <div class="col">
-                             <div class="right-text">Webinar</div>
-                          </div>
-                     </div>
-                     <div class="row">
-                          <div class="col-xl-4 col-md-5 col">
-                              <div class="left-text">   
-                                  <span>30th SEPTEMBER 2019</span>
-                              </div>
-                          </div>
-                         <div class="col">
-                             <div class="right-text">Applications close</div>
-                          </div>
-                     </div>
-                     <div class="row">
-                          <div class="col-xl-4 col-md-5 col">
-                              <div class="left-text">   
-                                  <span>JANUARY 2020</span>
-                              </div>
-                          </div>
-                         <div class="col">
-                             <div class="right-text">Shortlist Announced</div>
-                          </div>
-                     </div>
-                     <div class="row">
-                          <div class="col-xl-4 col-md-5 col">
-                              <div class="left-text">   
-                                  <span>26th FEBRUARY 2010</span>
-                              </div>
-                          </div>
-                         <div class="col">
-                             <div class="right-text">Awards ceremony and winners announced</div>
-                          </div>
-                     </div>
-                  </div>
-              </div>
-          </div>
+                <div class="content-datewise">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-5 col">
+                            <div class="left-text">
+                                <span>10th JUNE 2019</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="right-text checked">Applications open</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-5 col">
+                            <div class="left-text">
+                                <span>20th JUNE 2019</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="right-text">Webinar</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-5 col">
+                            <div class="left-text">
+                                <span>30th SEPTEMBER 2019</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="right-text">Applications close</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-5 col">
+                            <div class="left-text">
+                                <span>JANUARY 2020</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="right-text">Shortlist Announced</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-5 col">
+                            <div class="left-text">
+                                <span>26th FEBRUARY 2010</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="right-text">Awards ceremony and winners announced</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="section-apply-awards award-application">
-      <div class="loop py-50">
-          <div class="container">
-              <div class="content">
-                  <h3>BACKGROUND INFORMATION</h3>
-                  <span [innerHTML] = 'details && details["backgroundInformation"]'></span>
-              </div>
-          </div>
-      </div>
-      <div class="loop py-50">
-              <div class="container">
-                  <div class="content">
-                      <h3>ELIGIBILITY</h3>
-                      <span [innerHTML]='details && details["eligibility"]'></span>
-                  </div>
-              </div>
-      </div>
-      <div class="loop py-50">
-              <div class="container">
-                  <div class="content">
-                      <h3>APPLICATION PROCESS</h3>
-                      <span [innerHTML] ='details && details["applicationProcess"]'></span>
-                  </div>
-              </div>
-      </div>
-      <div class="loop py-50">
-              <div class="container">
-                  <div class="content">
-                      <h3>SELECTION PROCESS</h3>
-                      <span [innerHTML] = 'details && details["selectionProcess"]'></span>
-                  </div>
-              </div>
-      </div>
-      <div class="loop py-50">
-              <div class="container">
-                  <div class="content">
-                      <h3>WINNER NOTIFICATION & ANNOUNCEMENT</h3>
-                      <span [innerHTML]='details && details["winnerNotificationAndAnnouncement"]'></span>
-                  </div>
-              </div>
-      </div>
+    <div class="loop py-50">
+        <div class="container">
+            <div class="content">
+                <h3>BACKGROUND INFORMATION</h3>
+                <span [innerHTML]='details && details["backgroundInformation"]'></span>
+            </div>
+        </div>
+    </div>
+    <div class="loop py-50">
+        <div class="container">
+            <div class="content">
+                <h3>ELIGIBILITY</h3>
+                <span [innerHTML]='details && details["eligibility"]'></span>
+            </div>
+        </div>
+    </div>
+    <div class="loop py-50">
+        <div class="container">
+            <div class="content">
+                <h3>APPLICATION PROCESS</h3>
+                <span [innerHTML]='details && details["applicationProcess"]'></span>
+            </div>
+        </div>
+    </div>
+    <div class="loop py-50">
+        <div class="container">
+            <div class="content">
+                <h3>SELECTION PROCESS</h3>
+                <span [innerHTML]='details && details["selectionProcess"]'></span>
+            </div>
+        </div>
+    </div>
+    <div class="loop py-50">
+        <div class="container">
+            <div class="content">
+                <h3>WINNER NOTIFICATION & ANNOUNCEMENT</h3>
+                <span [innerHTML]='details && details["winnerNotificationAndAnnouncement"]'></span>
+            </div>
+        </div>
+    </div>
 
 </section>
