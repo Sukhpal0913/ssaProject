@@ -18,8 +18,6 @@ constructor(private router:Router){
 }
 
   onActivate(component) {
-    console.log(component)
-    console.log(component.show)
   }
 
   showMe() {

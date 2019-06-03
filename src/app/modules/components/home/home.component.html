@@ -2,7 +2,7 @@
   <div class="container">
     <div class="content">
         <h1>Welcome to the Stop Slavery Awards</h1>
-        <a class="readmore" href="#">READ MORE</a>
+        <a class="readmore" routerLink='/about-awards'>READ MORE</a>
         <div class="bottom-text">
             2019 Applications <a [routerLink] = "['categories']">now open</a>
         </div>
@@ -17,7 +17,7 @@
               <h2>ABOUT THE AWARDS</h2>
               <span [innerHTML]="aboutTheAwards"></span>
               <div class="btn-row pt-3">
-                  <a class="btn btn-primary" href="">READ MORE</a>
+                  <a class="btn btn-primary" routerLink='/about-awards'>READ MORE</a>
               </div>
           </div>
       </div>
@@ -77,7 +77,7 @@
                 <span [innerHTML]="aboutThePrize"></span>
               
                 <div class="btn-row pt-3">
-                    <a class="btn btn-primary" routerLink="aboutThePrizeUrl" target="_blank">FIND OUT MORE</a>
+                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=gtmX7G4Jd0w" target="_blank">FIND OUT MORE</a>
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@
         </div>
       </div>
       <div class="btn-row">
-          <a class="btn btn-secondary" [routerLink] = "['pastwinner']">SEE ALL</a>
+          <a class="btn btn-secondary" routerLink = "/past-winners">SEE ALL</a>
       </div>
   </div>
 </section>

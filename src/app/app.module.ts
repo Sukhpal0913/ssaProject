@@ -18,6 +18,7 @@ import { CategoriesComponent } from './modules/components/categories/categories.
 
 
 import { HttpService } from './modules/shared_services/http.service';
+import { AwardApplicationComponent } from './modules/components/award-application/award-application.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HttpService } from './modules/shared_services/http.service';
     ModernSlaveryComponent,
     HomeComponent,
     TermsConditionComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AwardApplicationComponent
   ],
   imports: [
     HttpClientModule,

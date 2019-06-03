@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 import { HttpService } from '../../shared_services/http.service';
+import { links } from '../../../config';
+import { forkJoin } from 'rxjs'
 
 @Component({
   selector: 'app-categories',
@@ -13,21 +15,30 @@ export class CategoriesComponent implements OnInit {
   pageTitle: String;
   introText: String;
   titleSubText: String;
+  contentList: Array<Object>;
 
 
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.httpSubscription = this.http.get('https://ssaangular.trust.org/api/content/id/4d2a9cd1-9a23-4b6c-9b33-04fb833bf50a').subscribe(result => {
-      const data = result && result['contentlets'];
+    let api1 = this.http.get(links['categories']);
+    let api2 = this.http.get(links['categoryList'])
+    this.httpSubscription = forkJoin([api1, api2]).subscribe(result => {
+      const data = result[0] && result[0]['contentlets'][0];
       this.pageTitle = data && data['pageTitle'];
       this.introText = data && data['introText'];
       this.titleSubText = data && data['titleSubText'];
+
+      this.contentList = result[1]['contentlets'];
     })
+  }
+
+  getImageUrl(image) {
+    if(image)
+      return `${links['imageLink']}/${image}`
   }
 
   ngOnDestroy() {
     this.httpSubscription && this.httpSubscription.unsubscribe();
   }
-
 }
