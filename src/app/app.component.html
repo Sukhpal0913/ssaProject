@@ -15,15 +15,16 @@
             <h3 class="title">APPLICATIONS <br/>OPEN</h3>
             <p>10th June - 30th September</p>
             <div class="btn-row pt-3">
-                <a class="btn btn-primary" href="">APPLY NOW</a>
+                <a class="btn btn-primary" href="/categories" (click)="route('categories')">APPLY NOW</a>
             </div>
           </div>
       </div>
       <div class="col-sm-12 col-md-6 brdr-lft">
           <div class="nav-links">
               <ul>
+                <li><a (click)="route('/')">HOME</a></li>
                 <li><a (click)="route('categories')">CATEGORIES</a></li>
-                <li><a (click)="route('about-awards')">ABOUT THE AWARDS</a></li>
+                <li><a (click)="route('about-awards')">ABOUT THE AWARD</a></li>
                 <li><a (click)="route('judges')">JUDGES</a></li>
                 <li><a (click)="route('past-winners')">PREVIOUS WINNERS</a></li>
                 <li><a (click)="route('terms-and-conditions')">T&Cs</a></li>
@@ -42,7 +43,7 @@
     <div class="row align-items-center">
         <div class="col">
           <div class="logo">
-            <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+            <a routerLink="/"><img src="assets/images/logo.png" alt="logo"></a>
           </div>
         </div>
         <div class="col-3">
