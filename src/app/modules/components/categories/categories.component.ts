@@ -16,26 +16,24 @@ export class CategoriesComponent implements OnInit {
   introText: String;
   titleSubText: String;
   contentList: Array<Object>;
+  ImgbasUrl:String;
 
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService
+   ) { }
 
   ngOnInit() {
+  
     let api1 = this.http.get(links['categories']);
     let api2 = this.http.get(links['categoryList'])
+    this.ImgbasUrl=links['imageLink'];
     this.httpSubscription = forkJoin([api1, api2]).subscribe(result => {
       const data = result[0] && result[0]['contentlets'][0];
       this.pageTitle = data && data['pageTitle'];
       this.introText = data && data['introText'];
       this.titleSubText = data && data['titleSubText'];
-
       this.contentList = result[1]['contentlets'];
     })
-  }
-
-  getImageUrl(image) {
-    if(image)
-      return `${links['imageLink']}/${image}`
   }
 
   ngOnDestroy() {
